@@ -1,0 +1,13 @@
+<div class="profile-container">
+  <h3 class="profile-name"><%= @user.name %></h3>
+</div>
+<% @plan.each do |plan| %>
+<div>
+  <%= link_to plan_path(plan.id) do %>
+    <%= "詳細ユーザー" %>
+  <% end %>
+  <p>タイトル：<%= plan.title %></p>
+  <p>内容：<%= plan.content %></p>
+  <p>ユーザーネーム：<%= plan.user.name %></p>
+</div>
+<% end %>

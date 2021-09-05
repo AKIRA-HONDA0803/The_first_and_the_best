@@ -1,0 +1,9 @@
+<% @plan.each do |plan| %>
+
+  <h4>タイトル</h4>
+  <p><%= plan.title %></p>
+  <h4>内容</h4>
+  <p><%= plan.content %></p>
+  <h4>ユーザーネーム</h4>
+  <p><%= plan.user.name %></p>
+<% end %>
