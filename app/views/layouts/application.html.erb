@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <%= favicon_link_tag('favicon.ico') %>
     <title>Careerscram</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <script src="https://kit.fontawesome.com/8a07afdd1a.js" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -22,7 +23,7 @@
       </li>
 
       <li>
-      <%= link_to 'マイページ', user_path(current_user.id) %>
+      <%= link_to 'マイページ', user_path(current_user.id), class:"fa fa-user-circle-o" %>
     </li>
     <% else %>
       <li>
