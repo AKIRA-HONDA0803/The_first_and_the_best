@@ -1,12 +1,29 @@
+<div class="card-list-container py-5">
 <% @plan.each do |plan| %>
+<div class="card w-50 mx-auto mt-4 shadow-lg">
+<div class="card-body">
+      <div class="row">
+        <div class="col-2">
+           <%= attachment_image_tag plan.user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %>
+           <p><%= plan.user.name %>　先生</p>
+        </div>
+          <div class="col-10">
+          <p class="card-title">タイトル:
+        <%= plan.title %></p>
 
-  <h4>タイトル</h4>
-  <p><%= plan.title %></p>
-  <h4>内容</h4>
-  <p><%= plan.content %></p>
+  <p class="card-text">内容:
+
+  <%= plan.content %></p>
+
   <h4>ユーザーネーム</h4>
   <p><%= plan.user.name %></p>
+   </div>
+      </div>
+    </div>
+  </div>
 <% end %>
+
+
 
 
 <%= render 'users/info', user: current_user %>

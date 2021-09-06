@@ -20,6 +20,7 @@ class PlansController < ApplicationController
 
   def show
     @plan = Plan.find(params[:id])
+    @user = @plan.user
   end
 
   def destroy

@@ -5,6 +5,12 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
+      <form class="d-flex">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-light" type="submit">Search</button>
+    </form>
+
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ml-auto">
 
@@ -12,17 +18,17 @@
 
  <% if user_signed_in? %>
     <li>
-        <%= link_to '投稿一覧', plans_path ,class: 'nav-link text-light'%>
+        <%= link_to '投稿一覧', plans_path ,class: 'nav-link text-light fas fa-home'%>
       </li>
       <li>
-        <%= link_to '投稿フォーム', new_plan_path,class: 'nav-link text-light' %>
+        <%= link_to '投稿フォーム', new_plan_path,class: 'nav-link text-light far fa-plus-square' %>
       </li>
       <li>
-        <%= link_to "ログアウト", destroy_user_session_path, method: :delete,class: 'nav-link text-light' %>
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete,class: 'nav-link text-light fas fa-sign-out-alt' %>
       </li>
 
       <li>
-      <%= link_to 'マイページ', user_path(current_user.id), class: 'nav-link text-light' %>
+      <%= link_to 'マイページ', user_path(current_user.id), class: 'nav-link text-light far fa-user' %>
     </li>
     <% else %>
       <li>
