@@ -7,8 +7,11 @@ class PlansController < ApplicationController
   def create
     @plan = Plan.new(plan_params)
     @plan.user_id = current_user.id
-    @plan.save
-    redirect_to plans_path
+    if @plan.save
+      redirect_to plans_path
+    else
+      render :new
+    end
   end
 
   def index
@@ -28,6 +31,6 @@ class PlansController < ApplicationController
   private
 
   def plan_params
-    params.require(:plan).permit(:title, :content)
+    params.require(:plan).permit(:title, :content, :introduction, :name)
   end
 end
