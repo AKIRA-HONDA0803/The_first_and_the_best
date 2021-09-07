@@ -1,14 +1,17 @@
+<div class="col-3 ">
+<%= render 'users/info', user: current_user %>
+</div>
 <div class="card-list-row  mx-5 ">
 <div class="d-inline-flex p-2 bd-highlight　 ">
+
 <% @plan.each do |plan| %>
 <div class="card w-50 mx-auto mt-5 shadow-lg col-3">
-<!--<div class="d-flex flex-row">-->
    <div class="card-body">
 
         <div class="col-3">
            <%= attachment_image_tag plan.user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %>
         </div>
-          　<div class="col-9">
+          　<div class="col-6">
           　<p clas="card-name　"><%= plan.user.name %>先生</p>
          　 <p class="card-title">タイトル: <%= plan.title %></p>
 　　　　　　<p class="card-text">内容:<%= plan.content %></p>
@@ -21,5 +24,3 @@
 </div>
 </div>
 
-
-<%= render 'users/info', user: current_user %>
