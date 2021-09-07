@@ -19,6 +19,7 @@
 
 
  <% if user_signed_in? %>
+    <li><%= link_to '講師一覧', users_path, class: 'nav-link text-dark fas fa-users'%></li>
     <li><%= link_to '投稿一覧', plans_path ,class: 'nav-link text-dark fas fa-home'%> </li>
     <li><%= link_to '投稿フォーム', new_plan_path,class: 'nav-link text-dark fas fa-plus-square' %></li>
     <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete,class: 'nav-link text-dark fas fa-sign-out-alt' %> </li>

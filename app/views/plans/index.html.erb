@@ -12,8 +12,8 @@
            <%= attachment_image_tag plan.user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %>
         </div>
           　<div class="col-6">
-          　<p clas="card-name　"><%= plan.user.name %>先生</p>
-         　 <p class="card-title">タイトル: <%= plan.title %></p>
+          　<p clas="card-name　"><%= link_to user_path(plan.user) do %><%= plan.user.name %>先生</p><% end %>
+         　 <p class="card-title">タイトル:<%= link_to plan_path(plan.id) do %><%= plan.title %></p> <% end %>
 　　　　　　<p class="card-text">内容:<%= plan.content %></p>
          　 </div>
     </div>
