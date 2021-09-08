@@ -21,11 +21,66 @@
     <li><%= link_to '投稿フォーム', new_plan_path,class: 'nav-link text-dark fas fa-plus-square' %></li>
     <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete,class: 'nav-link text-dark fas fa-sign-out-alt' %> </li>
     <li><%= link_to 'マイページ', user_path(current_user.id), class: 'nav-link text-dark fas fa-user' %></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!--   <div id="sp-menu">-->
+   <!--   <h2>MENU</h2>-->
+   <!--   <ul>-->
+   <!--     <li><a href="#">MENU1</a></li>-->
+   <!--     <li><a href="#">MENU2</a></li>-->
+   <!--     <li><a href="#">MENU3</a></li>-->
+   <!--     <li><a href="#">MENU4</a></li>-->
+   <!--     <li><a href="#">MENU5</a></li>-->
+   <!--   </ul>-->
+   <!-- </div>-->
+   <!--<li>-->
+   <!-- <div id="hm-icon">-->
+   <!--   <a class="menu-trigger" href="#">-->
+   <!--     <span></span>-->
+   <!--     <span></span>-->
+   <!--     <span></span>-->
+   <!--   </a>-->
+   <!-- </div>-->
+
+
+   <!-- </li>-->
+
+
+
+
     <% else %>
       <li> <%= link_to "新規登録", new_user_registration_path,class: 'fas fa-user-plus nav-link text-dark' %></li>
       <li> <%= link_to "ログイン", new_user_session_path,class: 'fas fa-sign-in-alt nav-link text-dark' %></li>
     <% end %>
      </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
       </div>
     </div>
   </nav>

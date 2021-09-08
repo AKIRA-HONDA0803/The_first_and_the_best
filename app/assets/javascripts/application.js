@@ -20,8 +20,16 @@
 //= require turbolinks
 //= require_tree .
 
-$(document).ready(function () {
-  $('.jquery').on('click', function(){
-    $(this).css('color','red');
+
+
+
+$(function() {
+  $('.menu-trigger').on('click', function(event) {
+    $(this).toggleClass('active');
+    $('#sp-menu').fadeToggle();
+    event.preventDefault();
   });
 });
+
+$(this).toggleClass('active');
+$('#sp-menu').fadeToggle();
