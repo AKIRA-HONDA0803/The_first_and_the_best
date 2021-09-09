@@ -31,5 +31,3 @@ $(function() {
   });
 });
 
-$(this).toggleClass('active');
-$('#sp-menu').fadeToggle();

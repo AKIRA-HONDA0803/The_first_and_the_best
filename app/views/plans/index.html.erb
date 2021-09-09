@@ -1,11 +1,8 @@
-<div class="col-3 ">
-<%= render 'users/info', user: current_user %>
-</div>
-<div class="card-list-row  mx-5 ">
-<div class="d-inline-flex p-2 bd-highlight　 ">
-
+<div class="card-list-row ">
+<div class="plan-container offset-lg-2">
+  投稿一覧
 <% @plan.each do |plan| %>
-<div class="card w-50 mx-auto mt-5 shadow-lg col-3">
+<div class="card w-50 mx-auto shadow-lg col-3">
    <div class="card-body">
 
            <%= attachment_image_tag plan.user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %>
@@ -17,7 +14,6 @@
 
 <% end %>
   </div>
-</div>
 </div>
 </div>
 
