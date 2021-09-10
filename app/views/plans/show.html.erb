@@ -16,3 +16,26 @@
    </div>
   </div>
 </div>
+
+<div>
+<!--<p>コメント件数：%= @plan.plan_comments.count %></p>-->
+<% @plan.plan_comments.each do |plan_comment| %>
+  <%= plan_comment.user.name %>
+  <%= plan_comment.comment %>
+
+ <% if plan_comment.user == current_user %>
+  <div>
+    <%= link_to "削除", plan_plan_comment_path(plan_comment.plan, plan_comment), method: :delete %>
+  </div>
+  <% end %>
+
+<% end %>
+</div>
+<div>
+<%= form_with(model:[@plan, @plan_comment], local: true) do |f| %>
+  <%= f.text_area :comment, rows:'5',placeholder: "コメントをここに" %>
+  <%= f.submit "送信する" %>
+<% end %>
+</div>
+
+

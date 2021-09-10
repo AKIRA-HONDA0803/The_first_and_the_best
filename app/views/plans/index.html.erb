@@ -9,6 +9,8 @@
           　<p clas="card-name"><%= link_to user_path(plan.user) do %><%= plan.user.name %>先生</p><% end %>
          　 <p class="card-title"><%= link_to plan_path(plan.id) do %><%= plan.title %></p> <% end %>
 　　　　　　<p class="card-text">内容:<%= plan.content %></p>
+
+　　　　　　<!--<p><= link_to "#{plan.plan_comments.count} コメント", plan_path(plan.id) %></p>-->
     </div>
 </div>
 

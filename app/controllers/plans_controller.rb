@@ -25,6 +25,7 @@ class PlansController < ApplicationController
   def show
     @plan = Plan.find(params[:id])
     @user = @plan.user
+    @plan_comment = PlanComment.new
   end
 
   def destroy
