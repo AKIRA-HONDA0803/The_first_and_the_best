@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="row align-items-center">
+  <div class="row ">
     <div class="col">
 
       <h3 class="profile-name"><%= @user.name %></h3>
@@ -9,28 +9,22 @@
   <p>内容：<%= @plan.content %></p>
   <p>ユーザーネーム：<%= @plan.user.name %></p>
   <p>投稿日時：<%= @plan.created_at.strftime('%Y/%m/%d') %></p>
-
   <% if @plan.user == current_user %>
     <%= link_to "削除", plan_path(@plan), method: :delete %>
   <% end %>
-   </div>
-  </div>
-</div>
 
 <div>
-<!--<p>コメント件数：%= @plan.plan_comments.count %></p>-->
 <% @plan.plan_comments.each do |plan_comment| %>
   <%= plan_comment.user.name %>
   <%= plan_comment.comment %>
 
  <% if plan_comment.user == current_user %>
   <div>
-    <%= link_to "削除", plan_plan_comment_path(plan_comment.plan, plan_comment), method: :delete %>
+    <%= link_to "削す", plan_plan_comment_path(plan_comment.plan, plan_comment), method: :delete %>
   </div>
   <% end %>
 
 <% end %>
-</div>
 <div>
 <%= form_with(model:[@plan, @plan_comment], local: true) do |f| %>
   <%= f.text_area :comment, rows:'5',placeholder: "コメントをここに" %>
@@ -38,4 +32,7 @@
 <% end %>
 </div>
 
-
+ </div>
+  </div>
+</div>
+</div>
