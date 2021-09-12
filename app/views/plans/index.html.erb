@@ -1,8 +1,7 @@
 <div class="card-list-row ">
 <div class="plan-container offset-lg-2">
-  投稿一覧
 <% @plan.each do |plan| %>
-<div class="card w-50 mx-auto shadow-lg col-3">
+<div class="card w-50  shadow-lg col-3">
    <div class="card-body">
 
            <%= attachment_image_tag plan.user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %>
