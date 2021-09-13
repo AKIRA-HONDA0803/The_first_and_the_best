@@ -7,6 +7,7 @@ class User < ApplicationRecord
 
   has_many :plans, dependent: :destroy
   has_many :plan_comments, dependent: :destroy
+  has_many :favorites, dependent: :destroy
   attachment :profile_image
 
   has_many :reverse_of_relationships, class_name: "Relationship", foreign_key: "followed_id", dependent: :destroy

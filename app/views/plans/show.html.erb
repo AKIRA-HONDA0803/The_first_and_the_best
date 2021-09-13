@@ -13,6 +13,27 @@
     <%= link_to "削除", plan_path(@plan), method: :delete %>
   <% end %>
 
+<% if @plan.favorited_by?(current_user) %>
+    <p>
+      <%= link_to plan_favorites_path(@plan), method: :delete do %>
+        ♥<%= @plan.favorites.count %> いいね
+      <% end %>
+    </p>
+    <% else %>
+    <p>
+      <%= link_to plan_favorites_path(@plan), method: :post do %>
+        ♡<%= @plan.favorites.count %> いいね
+      <% end %>
+    </p>
+  <% end %>
+
+
+
+
+
+
+
+
 <div>
 <% @plan.plan_comments.each do |plan_comment| %>
   <%= plan_comment.user.name %>
