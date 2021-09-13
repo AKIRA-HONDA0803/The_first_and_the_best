@@ -22,13 +22,21 @@
 
 
 body { padding-top: 70px;
-
 }
 
-.plan-container {
-  display: flex;
-  flex-wrap: wrap;
+// .plan-container {
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: space-between;
+//   width: 600px;
+// }
+
+.card{
+  display: grid;
+  grid-template-columns: minmax(10px, 1fr) 335px;
 }
+
+
 
 
 
