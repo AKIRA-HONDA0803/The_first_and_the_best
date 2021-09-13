@@ -1,10 +1,11 @@
 <div class="card-list-row  justify-content-between ">
-<div class="plan-container offset-lg-2">
+<div class="plan-container offset-lg-2  px-0">
 <% @plan.each do |plan| %>
-<div class="card  shadow-lg ">
+<div class="card  shadow-lg  mx-0 px-0">
+    <%= attachment_image_tag plan.user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg",class:"card-img-top" %>
    <div class="card-body">
 
-           <%= attachment_image_tag plan.user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %>
+
           　<p clas="card-name"><%= link_to user_path(plan.user) do %><%= plan.user.name %>先生</p><% end %>
          　 <p class="card-title"><%= link_to plan_path(plan.id) do %><%= plan.title %></p> <% end %>
 　　　　　　<p class="card-text">内容:<%= plan.content %></p>

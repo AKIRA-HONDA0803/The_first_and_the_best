@@ -4,12 +4,12 @@
     <hr></hr>
   </div>
 
-  <div class="plan-container　px-2">
+  <div class="plan-container ">
 
-<div class="plan-list col-lg-8 offset-lg-2">
+<div class="plan-list col-lg-8 offset-lg-2 ">
   <div class="row">
   <% @plan.each do |plan| %>
-<div class="card  shadow-lg col-4 mt-2 ">
+<div class="card  shadow-lg col-4 px-0 mt-2 px-0">
    <div class="card-body">
 
   <p><%= link_to plan_path(plan.id) do %><%= plan.title %></p> <% end %>
