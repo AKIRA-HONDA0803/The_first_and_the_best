@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'homes#top'
+  get 'users/:id/favorites' => 'users#favorites'
   resources :plans, only: [:new, :create, :index, :show, :destroy] do
    resources :plan_comments, only: [:create, :destroy]
    resource :favorites, only: [:create, :destroy]

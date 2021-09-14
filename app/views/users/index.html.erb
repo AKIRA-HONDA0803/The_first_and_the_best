@@ -2,7 +2,7 @@
    <div class="teacher-list-box col-4 offset-lg-2">
 <%  @user.each do |user| %>
 <%= link_to user_path(user.id) do%>
-<div class="card px-0 shadow-lg col-3 style="width: 18rem; ">
+<div class="card px-0 shadow-lg col-3 style="width: 18rem;"">
    <%= attachment_image_tag user, :profile_image,:fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg",class:"card-img-top"; %>
    <div class="card-body">
       <div class="row">
