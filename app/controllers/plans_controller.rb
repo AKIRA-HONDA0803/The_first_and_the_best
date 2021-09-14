@@ -20,7 +20,7 @@ class PlansController < ApplicationController
 
   def index
     @plan = Plan.all
-    @new_plan = Plan.all.order(id: "DESC")
+    @new_plan = Plan.page(params[:page]).reverse_order
   end
 
   def show
