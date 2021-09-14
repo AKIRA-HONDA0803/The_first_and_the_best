@@ -20,6 +20,7 @@ class PlansController < ApplicationController
 
   def index
     @plan = Plan.all
+    @new_plan = Plan.all.order(id: "DESC")
   end
 
   def show
