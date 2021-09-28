@@ -37,14 +37,32 @@ body { padding-top: 70px;
 // }
 
 
+@charset "UTF-8";
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1 {
+  text-align: center;
+  margin: 50px 0;
+}
+.box {
+  height: 300px;
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto 50px;
+  background-color: #eee;
+}
 
 
 #hm-icon {
-//   position: fixed;
+  position: fixed;
   right: 20px;
   top: 20px;
   z-index: 10;
+  padding-top: 70px
 }
 .menu-trigger,
 .menu-trigger span {
@@ -100,6 +118,7 @@ body { padding-top: 70px;
   min-height: 100%;
   display: none;
   z-index: 9;
+  padding-top: 70px;
 }
 #sp-menu li {
   text-align: center;
