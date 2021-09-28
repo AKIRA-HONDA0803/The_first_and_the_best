@@ -13,11 +13,10 @@
 <div class="card  shadow-lg  mr-2 mb-2" style="width: 18rem;">
    <div class="card-body">
 
-  <p><%= link_to plan_path(plan.id) do %><%= plan.title %></p> <% end %>
+  <p><%= link_to plan_path(plan.id), data: {"turbolinks" => false} do %><%= plan.title %></p> <% end %>
   <p><%= plan.content %></p>
 </div>
 </div>
-
 <% end %>
 </div>
 </div>
