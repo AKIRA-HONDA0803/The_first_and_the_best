@@ -26,11 +26,11 @@
     <li><div id="sp-menu">
       <h2>MENU</h2>
       <ul>
-        <li><%= link_to "講師一覧", users_path, class: 'nav-link text-white fas fa-users', data: {"turbolinks" => false} %></li>
-        <li><%= link_to "投稿一覧",plans_path ,class: 'nav-link text-white fas fa-home', data: {"turbolinks" => false} %></li>
-        <li><%= link_to '投稿フォーム', new_plan_path,class: 'nav-link text-white fas fa-plus-square', data: {"turbolinks" => false}  %></li>
-        <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete,class: 'nav-link text-white fas fa-sign-out-alt', data: {"turbolinks" => false}  %></li>
-        <li><%= link_to 'マイページ', user_path(current_user.id), class: 'nav-link text-white fas fa-user', data: {"turbolinks" => false} %></li>
+        <li><%= link_to "講師一覧", users_path, data: {"turbolinks" => false} %></li>
+        <li><%= link_to "投稿一覧",plans_path , data: {"turbolinks" => false} %></li>
+        <li><%= link_to '投稿フォーム', new_plan_path, data: {"turbolinks" => false}  %></li>
+        <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: {"turbolinks" => false}  %></li>
+        <li><%= link_to 'マイページ', user_path(current_user.id),  data: {"turbolinks" => false} %></li>
       </ul>
     </div>
 

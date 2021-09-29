@@ -18,10 +18,14 @@
 @import 'font-awesome';
 
 
-
+@font-face {
+	font-family: PixelMplus10-Regular;
+	src: url('https://kuneoresearch.com/wp-content/themes/stinger5verkuneo/font/PixelMplus10-Regular.ttf') format("truetype");
+}
 
 
 body { padding-top: 70px;
+font-family: PixelMplus10-Regular;
 }
 
 // .plan-container {
