@@ -12,12 +12,11 @@
  *
  *= require_tree .
  *= require_self
+ *= require fullcalendar
  */
 @import "bootstrap";
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
-
-
 @font-face {
 	font-family: PixelMplus10-Regular;
 	src: url('https://kuneoresearch.com/wp-content/themes/stinger5verkuneo/font/PixelMplus10-Regular.ttf') format("truetype");
@@ -133,3 +132,4 @@ h1 {
   text-decoration: none;
   font-weight: bold;
 }
+
