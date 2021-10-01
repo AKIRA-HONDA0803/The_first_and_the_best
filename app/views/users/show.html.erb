@@ -23,18 +23,7 @@
 </div>
 </div>
 </div>
-いいね一覧
-<% if @favorites.present? %>
-<% @favorites.each do |favorite| %>
-<% plan = Plan.find_by(id: favorite.plan.id) %>
-<%= attachment_image_tag plan.user, :profile_image, :fill, 100, 100, fallback: "no_image.jpg" %>
-<%= link_to(plan.title, "/plans/#{plan.id}") %>
-<%= plan.content %>
-<%= link_to(plan.user.name, "/users/#{plan.user.id}") %>
-<% end %>
-<% else %>
-<p>いいねはありません</p>
-<% end %>
+
 
 <div id="calendar"></div><br>
 

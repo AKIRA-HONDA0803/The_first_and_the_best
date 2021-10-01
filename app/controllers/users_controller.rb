@@ -21,7 +21,7 @@ class UsersController < ApplicationController
 
   def favorites
     @user = User.find_by(id: params[:id])
-     @favorites = Favorite.where(user_id: @user)
+     @favorites = Favorite.where(user_id: @user).all
   end
 
   private
