@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :events
   devise_for :users
   root to: 'homes#top'
-  get 'fav' => 'favorites#fav', as: 'favorites'
+  get 'favorites' => 'users#favorites', as: 'favorites'
   resources :plans, only: [:new, :create, :index, :show, :destroy] do
    resources :plan_comments, only: [:create, :destroy]
    resource :favorites, only: [:create, :destroy]
