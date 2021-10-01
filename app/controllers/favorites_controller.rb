@@ -12,4 +12,6 @@ class FavoritesController < ApplicationController
     favorite.destroy
     redirect_to plan_path(plan)
   end
+
+
 end
