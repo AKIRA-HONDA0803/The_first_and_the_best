@@ -21,7 +21,7 @@ class UsersController < ApplicationController
 
   def favorites
     @user = User.find_by(id: params[:id])
-     @favorites = Favorite.where(user_id: @user).all
+    @favorites = Favorite.where(user_id: @user).all
   end
 
   private
@@ -29,5 +29,4 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:name, :profile_image, :introduction)
   end
-
 end

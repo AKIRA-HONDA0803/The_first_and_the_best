@@ -19,5 +19,4 @@ class PlanCommentsController < ApplicationController
   def plan_params
     params.require(:plan_comment).permit(:comment)
   end
-
 end

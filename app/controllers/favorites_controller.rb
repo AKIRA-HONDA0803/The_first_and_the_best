@@ -13,8 +13,6 @@ class FavoritesController < ApplicationController
     redirect_to plan_path(plan)
   end
 
-
-
   # def create
   #   favorite = Favorite.new(user_id: @current_user.id, plan_id: params[:plan_id])
   #   favorite.save
@@ -26,6 +24,4 @@ class FavoritesController < ApplicationController
   #   favorite.destroy
   #   redirect_to("/plans/#{params[:plan_id]}")
   # end
-
-
 end
